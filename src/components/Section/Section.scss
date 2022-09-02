@@ -1,0 +1,26 @@
+
+.section {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .section__heading {
+            font-size: 1.8rem;
+            margin: 1rem 0;
+        }
+    
+        .section__link {
+            text-decoration: none;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__description {
+        text-align: left;
+        font-size: 1.1rem;
+        margin: 0.3rem auto 1rem;
+        line-height: 1.5;
+    }
+}
