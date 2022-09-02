@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/react-decision-making/" element={<Home />} />
       </Routes>
     </Router>
   );
