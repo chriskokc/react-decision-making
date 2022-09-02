@@ -1,6 +1,6 @@
+@use "../../styles/variables" as *;
 
 .section {
-
     &__container {
         display: flex;
         justify-content: space-between;
@@ -22,5 +22,12 @@
         font-size: 1.1rem;
         margin: 0.3rem auto 1rem;
         line-height: 1.5;
+    }
+
+    &__hr {
+        border: dotted $color-border 0.4rem;
+        border-bottom: none;
+        width: 3rem;
+        margin: 1.5rem auto 0;
     }
 }
