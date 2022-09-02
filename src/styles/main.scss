@@ -1,6 +1,2 @@
-@use "./variables" as *;
 @use "./reset";
-
-* {
-    background-color: $color-primary;
-}
+@use "./typography";
