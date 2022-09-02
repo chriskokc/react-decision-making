@@ -2,11 +2,11 @@
 .form {
     padding: 0.7rem;
 
-    .form__heading {
+    &__heading {
         font-size: 1rem;
     }
 
-    .form__textarea::placeholder {
+    &__textarea::placeholder {
         font-size: 0.8rem;
         opacity: 0.5;
     }

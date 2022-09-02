@@ -2,11 +2,11 @@
 .home {
     text-align: center;
 
-    .home__title {
+    &__title {
         margin: 2.5rem auto 4rem;
     }
 
-    .home__main {
+    &__main {
         
         .home__link {
             text-decoration: none;
