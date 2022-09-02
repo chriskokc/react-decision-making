@@ -8,9 +8,12 @@ const Form = ({ title, isTitleForm }) => {
       </p>
       <textarea
         name={`${title}-form`}
-        className={`form__${title}`}
+        className="form form__textarea"
         cols="40"
-        rows={isTitleForm ? "8" : "20"}
+        rows={isTitleForm ? "8" : "18"}
+        placeholder={
+          isTitleForm ? "Insert title here" : "Write your content here"
+        }
       ></textarea>
     </form>
   );

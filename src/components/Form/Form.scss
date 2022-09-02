@@ -1,4 +1,13 @@
 
 .form {
     padding: 0.7rem;
+
+    .form__heading {
+        font-size: 1rem;
+    }
+
+    .form__textarea::placeholder {
+        font-size: 0.8rem;
+        opacity: 0.5;
+    }
 }
