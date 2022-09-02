@@ -1,9 +1,18 @@
+@use "../../styles/variables" as *;
 
 .form {
     padding: 0.7rem;
 
     &__heading {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0.3rem 0 0.8rem;
+    }
+
+    &__textarea {
+        border: 2px solid $color-border;
+        border-radius: 0.3rem;
+        padding: 0.5rem 1.1rem;
     }
 
     &__textarea::placeholder {
