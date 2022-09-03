@@ -13,10 +13,12 @@
         border: 2px solid $color-border;
         border-radius: 0.3rem;
         padding: 0.5rem 1.1rem;
+        background-color: $color-secondary;
+
+        &::placeholder {
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
     }
 
-    &__textarea::placeholder {
-        font-size: 0.8rem;
-        opacity: 0.5;
-    }
 }
