@@ -1,8 +1,10 @@
+@use "../../styles/variables" as *;
 
 .home {
     text-align: center;
 
     &__title {
+        font-family: $font-secondary;
         margin: 2.5rem auto 4rem;
     }
 

@@ -3,9 +3,9 @@ import "./Form.scss";
 const Form = ({ title, isTitleForm }) => {
   return (
     <form className="form">
-      <p className="form__heading">
-        <label htmlFor={`${title}-form`}>{title}:</label>
-      </p>
+      <label htmlFor={`${title}-form`} className="form__heading">
+        {title}:
+      </label>
       <textarea
         name={`${title}-form`}
         className="form__textarea"

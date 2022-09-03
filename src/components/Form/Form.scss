@@ -1,9 +1,10 @@
 @use "../../styles/variables" as *;
 
 .form {
-    padding: 0.7rem;
+    padding: 1rem;
 
     &__heading {
+        font-family: $font-secondary;
         font-size: 1.2rem;
         font-weight: 700;
         margin: 0.3rem 0 0.8rem;
@@ -16,8 +17,8 @@
         background-color: $color-secondary;
 
         &::placeholder {
-            font-size: 0.8rem;
-            opacity: 0.5;
+            font-size: 1rem;
+            opacity: 0.7;
         }
     }
 
