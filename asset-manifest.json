@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-decision-making/static/css/main.cbbc3ec2.css",
-    "main.js": "/react-decision-making/static/js/main.2b96a750.js",
+    "main.js": "/react-decision-making/static/js/main.5b39ad49.js",
     "static/js/787.5e3b7a4c.chunk.js": "/react-decision-making/static/js/787.5e3b7a4c.chunk.js",
     "index.html": "/react-decision-making/index.html",
     "main.cbbc3ec2.css.map": "/react-decision-making/static/css/main.cbbc3ec2.css.map",
-    "main.2b96a750.js.map": "/react-decision-making/static/js/main.2b96a750.js.map",
+    "main.5b39ad49.js.map": "/react-decision-making/static/js/main.5b39ad49.js.map",
     "787.5e3b7a4c.chunk.js.map": "/react-decision-making/static/js/787.5e3b7a4c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cbbc3ec2.css",
-    "static/js/main.2b96a750.js"
+    "static/js/main.5b39ad49.js"
   ]
 }
