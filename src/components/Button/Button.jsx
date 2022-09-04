@@ -1,8 +1,8 @@
 import "./Button.scss";
 
-const Button = ({ buttonText, onClick }) => {
+const Button = ({ buttonText }) => {
   return (
-    <button className="button" onClick={onClick}>
+    <button className="button" type="submit">
       {buttonText}
     </button>
   );
