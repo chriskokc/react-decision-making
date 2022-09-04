@@ -1,5 +1,6 @@
 import blackCross from "../../assets/images/black-cross.png";
 import Form from "../../components/Form/Form";
+import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 import "./AddDecisions.scss";
 import { Link } from "react-router-dom";
 
@@ -14,6 +15,7 @@ const AddDecision = () => {
         />
       </Link>
       <h1 className="addDecision__heading">Add decisions you have made</h1>
+      <DropdownMenu />
       <Form title="Title" isTitleForm={true} />
       <Form title="Content" isTitleForm={false} />
     </div>
