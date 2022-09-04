@@ -9,7 +9,7 @@ const DecisionCardList = ({ decisionArr }) => {
         type={decisionObj.type}
         title={decisionObj.title}
         content={decisionObj.content}
-        date={decisionObj.dateCreated}
+        date={decisionObj.dateCreated.split("T")[0]}
       />
     );
   });
