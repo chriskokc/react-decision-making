@@ -3,10 +3,10 @@ import "./DecisionCard.scss";
 const DecisionCard = ({ type, title, content, date }) => {
   return (
     <div className="card">
-      <p>Type: {type}</p>
-      <p>Title: {title} </p>
-      <p>Content: {content}</p>
-      <p>Date: {date}</p>
+      <p className="card__item">Type: {type}</p>
+      <p className="card__item">Title: {title} </p>
+      <p className="card__item">Content: {content}</p>
+      <p className="card__item">Date: {date}</p>
     </div>
   );
 };

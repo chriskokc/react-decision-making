@@ -1,1 +1,8 @@
-@use "../../styles/variables" as *;
+
+.card {
+    margin: 1rem auto 2rem;
+    
+    &__item {
+        font-weight: bold;
+    }
+}
