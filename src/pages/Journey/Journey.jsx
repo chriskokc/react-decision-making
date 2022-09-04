@@ -1,6 +1,7 @@
 import "./Journey.scss";
 import blackCross from "../../assets/images/black-cross.png";
 import { Link } from "react-router-dom";
+import HorizontalNavBar from "../../components/HorizontalNavBar/HorizontalNavBar";
 
 const Journey = () => {
   // GET
@@ -22,6 +23,7 @@ const Journey = () => {
         />
       </Link>
       <h1 className="journey__heading">Journey</h1>
+      <HorizontalNavBar />
     </div>
   );
 };
