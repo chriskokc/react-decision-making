@@ -10,7 +10,7 @@ const Form = ({ title, isTitleForm }) => {
         name={`${title}-form`}
         className="form__textarea"
         cols="40"
-        rows={isTitleForm ? "8" : "18"}
+        rows={isTitleForm ? "4" : "9"}
         placeholder={
           isTitleForm ? "Insert title here" : "Write your content here"
         }

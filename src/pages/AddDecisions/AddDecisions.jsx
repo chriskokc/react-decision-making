@@ -1,6 +1,7 @@
 import blackCross from "../../assets/images/black-cross.png";
 import Form from "../../components/Form/Form";
 import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
+import Button from "../../components/Button/Button";
 import "./AddDecisions.scss";
 import { Link } from "react-router-dom";
 
@@ -18,6 +19,7 @@ const AddDecision = () => {
       <DropdownMenu />
       <Form title="Title" isTitleForm={true} />
       <Form title="Content" isTitleForm={false} />
+      <Button buttonText="save" />
     </div>
   );
 };
