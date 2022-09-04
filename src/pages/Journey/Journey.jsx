@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 const Journey = () => {
   const [userData, setUserData] = useState([]);
+  const [toShowMyDecisions, setToShowMyDecisions] = useState(false);
 
   // GET
   const getUserData = async () => {
@@ -20,6 +21,10 @@ const Journey = () => {
     getUserData();
   }, []);
 
+  const handleGetMyDecisions = () => {
+    setToShowMyDecisions(true);
+  };
+
   return (
     <div className="journey">
       <Link to="/react-decision-making">
@@ -30,8 +35,8 @@ const Journey = () => {
         />
       </Link>
       <h1 className="journey__heading">Journey</h1>
-      <HorizontalNavBar />
-      <DecisionCardList decisionArr={userData} />
+      <HorizontalNavBar getMyDecisions={handleGetMyDecisions} />
+      {toShowMyDecisions && <DecisionCardList decisionArr={userData} />}
     </div>
   );
 };
