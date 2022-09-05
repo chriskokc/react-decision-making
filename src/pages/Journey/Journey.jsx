@@ -3,27 +3,12 @@ import blackCross from "../../assets/images/black-cross.png";
 import { Link } from "react-router-dom";
 import HorizontalNavBar from "../../components/HorizontalNavBar/HorizontalNavBar";
 import DecisionCardList from "../../containers/DecisionCardList/DecisionCardList";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import DecisionContext from "../../context/DecisionContext";
 
 const Journey = () => {
-  const [userData, setUserData] = useState([]);
-  const [toShowMyDecisions, setToShowMyDecisions] = useState(false);
-
-  // GET
-  const getUserData = async () => {
-    const url = "http://localhost:8080/decisions";
-    const response = await fetch(url);
-    const data = await response.json();
-    setUserData(data);
-  };
-
-  useEffect(() => {
-    getUserData();
-  }, []);
-
-  const handleGetMyDecisions = () => {
-    setToShowMyDecisions(true);
-  };
+  const { userData, toShowMyDecisions, handleGetMyDecisions } =
+    useContext(DecisionContext);
 
   return (
     <div className="journey">

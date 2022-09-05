@@ -2,7 +2,7 @@ import "./DropdownMenu.scss";
 
 const DropdownMenu = () => {
   return (
-    <form className="dropDownMenu">
+    <div className="dropDownMenu">
       <label htmlFor="type" className="dropDownMenu__label">
         Choose a type:{" "}
       </label>
@@ -11,7 +11,7 @@ const DropdownMenu = () => {
         <option value="work">Work</option>
         <option value="relationship">Relationship</option>
       </select>
-    </form>
+    </div>
   );
 };
 

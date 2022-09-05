@@ -4,14 +4,31 @@ import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 import Button from "../../components/Button/Button";
 import "./AddDecisions.scss";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import DecisionContext from "../../context/DecisionContext";
 
 const AddDecision = () => {
-  const handleSubmit = (event) => {
+  const { getUserData } = useContext(DecisionContext);
+
+  // POST
+  const saveUserData = async (userData) => {
+    const url = "http://localhost:8080/decision";
+    await fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const typeTarget = event.target.firstChild[0];
-    const titleTarget = event.target.firstChild.nextSibling[0];
-    const contentTarget = event.target.firstChild.nextSibling.nextSibling[0];
+    const typeTarget = event.target[0];
+    const titleTarget = event.target[1];
+    const contentTarget = event.target[2];
 
     const decisionData = {
       createdBy: "Chris",
@@ -21,20 +38,8 @@ const AddDecision = () => {
         typeTarget.value.charAt(0).toUpperCase() + typeTarget.value.slice(1),
     };
 
-    // POST
-    const saveUserData = async (userData) => {
-      const url = "http://localhost:8080/decision";
-      await fetch(url, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
-    };
-
-    saveUserData(decisionData);
+    await saveUserData(decisionData);
+    getUserData();
   };
 
   return (

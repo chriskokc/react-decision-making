@@ -2,7 +2,7 @@ import "./Form.scss";
 
 const Form = ({ title, isTitleForm }) => {
   return (
-    <form className="form">
+    <div className="form">
       <label htmlFor={`${title}-form`} className="form__heading">
         {title}:
       </label>
@@ -15,7 +15,7 @@ const Form = ({ title, isTitleForm }) => {
           isTitleForm ? "Insert title here" : "Write your content here"
         }
       ></textarea>
-    </form>
+    </div>
   );
 };
 

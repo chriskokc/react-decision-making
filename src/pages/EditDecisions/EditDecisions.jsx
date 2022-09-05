@@ -17,6 +17,7 @@ const EditDecisions = () => {
         />
       </Link>
       <h1 className="editDecision__heading">Decision</h1>
+
       <Button buttonText="edit" />
     </div>
   );
