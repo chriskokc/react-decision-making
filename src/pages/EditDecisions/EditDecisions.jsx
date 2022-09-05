@@ -34,7 +34,9 @@ const EditDecisions = () => {
         content={foundDecision()[0].content}
         date={foundDecision()[0].dateCreated.split("T")[0]}
       />
-      <Button buttonText="edit" />
+      <span></span>
+      <Button buttonText="Remove" />
+      <Button buttonText="Favourite" />
     </div>
   );
 };

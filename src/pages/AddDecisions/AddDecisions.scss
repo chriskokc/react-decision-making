@@ -17,4 +17,10 @@
         font-size: 1.5rem;
         margin: 2.5rem auto 1.8rem;
     }
+
+    &__btn-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+    }
 }

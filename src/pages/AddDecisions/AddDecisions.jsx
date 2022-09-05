@@ -57,7 +57,9 @@ const AddDecision = () => {
         <DropdownMenu />
         <Form title="Title" isTitleForm={true} />
         <Form title="Content" isTitleForm={false} />
-        <Button buttonText="save" />
+        <div className="addDecision__btn-container">
+          <Button buttonText="save" />
+        </div>
       </form>
     </div>
   );
