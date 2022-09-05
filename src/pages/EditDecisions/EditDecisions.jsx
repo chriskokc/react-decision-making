@@ -9,13 +9,30 @@ import DecisionContext from "../../context/DecisionContext";
 
 const EditDecisions = () => {
   const { decisionId } = useParams();
-  const { userData } = useContext(DecisionContext);
+  const { userData, getUserData } = useContext(DecisionContext);
 
   const foundDecision = () => {
     const result = userData.filter((decision) => {
       return decision.id === Number(decisionId);
     });
     return result;
+  };
+
+  // DELETE
+  const deleteUserDataById = async (id) => {
+    const url = `http://localhost:8080/decision/${id}`;
+    await fetch(url, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
+  const handleDelete = async () => {
+    await deleteUserDataById(foundDecision()[0].id);
+    getUserData();
   };
 
   return (
@@ -35,7 +52,7 @@ const EditDecisions = () => {
         date={foundDecision()[0].dateCreated.split("T")[0]}
       />
       <div className="editDecision__btn-container">
-        <Button buttonText="Remove" />
+        <Button buttonText="Remove" onClick={handleDelete} />
         <Button buttonText="Favourite" />
       </div>
     </div>
