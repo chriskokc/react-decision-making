@@ -20,7 +20,7 @@ const EditDecisions = () => {
 
   return (
     <div className="editDecision">
-      <Link to="/react-decision-making">
+      <Link to="/react-decision-making/journey">
         <img
           src={blackCross}
           className="editDecision__black-cross"
