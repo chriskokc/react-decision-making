@@ -21,8 +21,6 @@ const AddDecision = () => {
         typeTarget.value.charAt(0).toUpperCase() + typeTarget.value.slice(1),
     };
 
-    console.log(decisionData);
-
     // POST
     const saveUserData = async (userData) => {
       const url = "http://localhost:8080/decision";
