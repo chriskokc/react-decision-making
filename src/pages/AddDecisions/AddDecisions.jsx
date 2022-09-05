@@ -13,9 +13,30 @@ const AddDecision = () => {
     const titleTarget = event.target.firstChild.nextSibling[0];
     const contentTarget = event.target.firstChild.nextSibling.nextSibling[0];
 
-    console.log(typeTarget.value);
-    console.log(titleTarget.value);
-    console.log(contentTarget.value);
+    const decisionData = {
+      createdBy: "Chris",
+      title: titleTarget.value,
+      content: contentTarget.value,
+      type:
+        typeTarget.value.charAt(0).toUpperCase() + typeTarget.value.slice(1),
+    };
+
+    console.log(decisionData);
+
+    // POST
+    const saveUserData = async (userData) => {
+      const url = "http://localhost:8080/decision";
+      await fetch(url, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+    };
+
+    saveUserData(decisionData);
   };
 
   return (
