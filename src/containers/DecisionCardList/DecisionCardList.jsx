@@ -16,7 +16,7 @@ const DecisionCardList = ({ decisionArr }) => {
           content={decisionObj.content}
           date={decisionObj.dateCreated.split("T")[0]}
         />
-        <span className="card-list__logo">✍🏼</span>
+        <span className="card-list__logo">⭐️</span>
       </Link>
     );
   });
