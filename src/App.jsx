@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddDecision from "./pages/AddDecisions/AddDecisions";
+import EditDecisions from "./pages/EditDecisions/EditDecisions";
 import Home from "./pages/Home/Home";
 import Journey from "./pages/Journey/Journey";
 
@@ -14,6 +15,10 @@ const App = () => {
         <Route
           path="/react-decision-making/addDecisions"
           element={<AddDecision />}
+        />
+        <Route
+          path="/react-decision-making/:decisionId"
+          element={<EditDecisions />}
         />
       </Routes>
     </Router>

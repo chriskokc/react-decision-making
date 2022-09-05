@@ -1,9 +1,12 @@
 import "./EditDecisions.scss";
 import blackCross from "../../assets/images/black-cross.png";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Button from "../../components/Button/Button";
 
 const EditDecisions = () => {
+  const parameters = useParams();
+  console.log(parameters);
   return (
     <div className="editDecision">
       <Link to="/react-decision-making">
