@@ -1,0 +1,8 @@
+@use "../../styles/variables" as *;
+
+.modal {
+    text-align: center;
+    margin: 1rem;
+    color: $color-modal;
+    margin: 2.5rem auto;
+}

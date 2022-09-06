@@ -6,11 +6,13 @@ import DecisionCard from "../../components/DecisionCard/DecisionCard";
 import Button from "../../components/Button/Button";
 import { useContext, useState } from "react";
 import DecisionContext from "../../context/DecisionContext";
+import ModalBox from "../../components/ModalBox/ModalBox";
 
 const EditDecisions = () => {
   const { decisionId } = useParams();
   const { userData, getUserData } = useContext(DecisionContext);
   const [isDeleted, setIsDeleted] = useState(false);
+  const [toShowModalBox, setToShowModalBox] = useState(false);
 
   const foundDecision = () => {
     const result = userData.filter((decision) => {
@@ -34,6 +36,7 @@ const EditDecisions = () => {
   const handleDelete = async () => {
     await deleteUserDataById(foundDecision()[0].id);
     setIsDeleted(true);
+    setToShowModalBox(true);
     getUserData();
   };
 
@@ -46,7 +49,10 @@ const EditDecisions = () => {
           alt="black cross"
         />
       </Link>
-      <h1 className="editDecision__heading">Decisions saved</h1>
+      <h1 className="editDecision__heading">Decision saved</h1>
+      {toShowModalBox && (
+        <ModalBox message="You have deleted Decision successfully" />
+      )}
       {!isDeleted && (
         <DecisionCard
           type={foundDecision()[0].type}
