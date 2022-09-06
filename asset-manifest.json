@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-decision-making/static/css/main.d272476a.css",
-    "main.js": "/react-decision-making/static/js/main.2ceab09c.js",
+    "main.css": "/react-decision-making/static/css/main.09529bbf.css",
+    "main.js": "/react-decision-making/static/js/main.2e9fde65.js",
     "static/js/787.5e3b7a4c.chunk.js": "/react-decision-making/static/js/787.5e3b7a4c.chunk.js",
     "index.html": "/react-decision-making/index.html",
-    "main.d272476a.css.map": "/react-decision-making/static/css/main.d272476a.css.map",
-    "main.2ceab09c.js.map": "/react-decision-making/static/js/main.2ceab09c.js.map",
+    "main.09529bbf.css.map": "/react-decision-making/static/css/main.09529bbf.css.map",
+    "main.2e9fde65.js.map": "/react-decision-making/static/js/main.2e9fde65.js.map",
     "787.5e3b7a4c.chunk.js.map": "/react-decision-making/static/js/787.5e3b7a4c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d272476a.css",
-    "static/js/main.2ceab09c.js"
+    "static/css/main.09529bbf.css",
+    "static/js/main.2e9fde65.js"
   ]
 }
