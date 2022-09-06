@@ -58,7 +58,7 @@ const EditDecisions = () => {
       {!isDeleted && (
         <div className="editDecision__btn-container">
           <Button buttonText="Remove" onClick={handleDelete} />
-          <Button buttonText="Favourite" />
+          <Button buttonText="Edit" />
         </div>
       )}
     </div>
