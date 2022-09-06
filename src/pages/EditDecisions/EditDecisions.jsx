@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import DecisionCard from "../../components/DecisionCard/DecisionCard";
 import Button from "../../components/Button/Button";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import DecisionContext from "../../context/DecisionContext";
 
 const EditDecisions = () => {
   const { decisionId } = useParams();
   const { userData, getUserData } = useContext(DecisionContext);
+  const [isDeleted, setIsDeleted] = useState(false);
 
   const foundDecision = () => {
     const result = userData.filter((decision) => {
@@ -32,6 +33,7 @@ const EditDecisions = () => {
 
   const handleDelete = async () => {
     await deleteUserDataById(foundDecision()[0].id);
+    setIsDeleted(true);
     getUserData();
   };
 
@@ -45,16 +47,20 @@ const EditDecisions = () => {
         />
       </Link>
       <h1 className="editDecision__heading">Decisions saved</h1>
-      <DecisionCard
-        type={foundDecision()[0].type}
-        title={foundDecision()[0].title}
-        content={foundDecision()[0].content}
-        date={foundDecision()[0].dateCreated.split("T")[0]}
-      />
-      <div className="editDecision__btn-container">
-        <Button buttonText="Remove" onClick={handleDelete} />
-        <Button buttonText="Favourite" />
-      </div>
+      {!isDeleted && (
+        <DecisionCard
+          type={foundDecision()[0].type}
+          title={foundDecision()[0].title}
+          content={foundDecision()[0].content}
+          date={foundDecision()[0].dateCreated.split("T")[0]}
+        />
+      )}
+      {!isDeleted && (
+        <div className="editDecision__btn-container">
+          <Button buttonText="Remove" onClick={handleDelete} />
+          <Button buttonText="Favourite" />
+        </div>
+      )}
     </div>
   );
 };
