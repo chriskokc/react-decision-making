@@ -7,12 +7,16 @@ import Button from "../../components/Button/Button";
 import { useContext, useState } from "react";
 import DecisionContext from "../../context/DecisionContext";
 import ModalBox from "../../components/ModalBox/ModalBox";
+import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
+import Form from "../../components/Form/Form";
 
 const EditDecisions = () => {
   const { decisionId } = useParams();
   const { userData, getUserData } = useContext(DecisionContext);
   const [isDeleted, setIsDeleted] = useState(false);
   const [toShowDeleteMessage, setToShowDeleteMessage] = useState(false);
+  const [toShowEditMessage, setToShowEditMessage] = useState(false);
+  const [requiresEdit, setRequiresEdit] = useState(false);
 
   const foundDecision = () => {
     const result = userData.filter((decision) => {
@@ -40,6 +44,43 @@ const EditDecisions = () => {
     getUserData();
   };
 
+  // PUT
+  const updateUserDataById = async (id, newUserData) => {
+    const url = `http://localhost:8080/decision/${id}`;
+    await fetch(url, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUserData),
+    });
+  };
+
+  const handleEdit = () => {
+    setRequiresEdit(true);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const typeTarget = event.target[0];
+    const titleTarget = event.target[1];
+    const contentTarget = event.target[2];
+
+    const newDecisionData = {
+      createdBy: "Chris",
+      title: titleTarget.value,
+      content: contentTarget.value,
+      type:
+        typeTarget.value.charAt(0).toUpperCase() + typeTarget.value.slice(1),
+    };
+
+    await updateUserDataById(Number(decisionId), newDecisionData);
+    setToShowEditMessage(true);
+    getUserData();
+  };
+
   return (
     <div className="editDecision">
       <Link to="/react-decision-making/journey">
@@ -53,6 +94,9 @@ const EditDecisions = () => {
       {toShowDeleteMessage && (
         <ModalBox message="You have deleted Decision successfully" />
       )}
+      {toShowEditMessage && (
+        <ModalBox message="You have modified Decision successfully" />
+      )}
       {!isDeleted && (
         <DecisionCard
           type={foundDecision()[0].type}
@@ -61,11 +105,21 @@ const EditDecisions = () => {
           date={foundDecision()[0].dateCreated.split("T")[0]}
         />
       )}
-      {!isDeleted && (
+      {!isDeleted && !requiresEdit && (
         <div className="editDecision__btn-container">
           <Button buttonText="Remove" onClick={handleDelete} />
-          <Button buttonText="Edit" />
+          <Button buttonText="Edit" onClick={handleEdit} />
         </div>
+      )}
+      {requiresEdit && (
+        <form onSubmit={handleSubmit}>
+          <DropdownMenu />
+          <Form title="Title" isTitleForm={true} />
+          <Form title="Content" isTitleForm={false} />
+          <div className="editDecision__btn-container--secondary">
+            <Button buttonText="modify" />
+          </div>
+        </form>
       )}
     </div>
   );

@@ -22,5 +22,10 @@
         margin: 4rem 2rem;
         display: flex;
         justify-content: space-around;
+
+        &--secondary {
+            margin: 0;
+            padding: 1rem;
+        }
     }
 }
