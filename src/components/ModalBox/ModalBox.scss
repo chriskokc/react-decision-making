@@ -1,8 +1,13 @@
 @use "../../styles/variables" as *;
 
 .modal {
+    background-color: $color-modal;
+    border-radius: 0.3rem;
+    opacity: 0.9;
+    position: absolute;
+    width: 95%;
+    z-index: 1;
     text-align: center;
-    margin: 1rem;
-    color: $color-modal;
-    margin: 2.5rem auto;
+    padding: 1.2rem 1.2rem;
+    margin: 0.5rem 0.3rem;
 }

@@ -4,11 +4,13 @@ import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 import Button from "../../components/Button/Button";
 import "./AddDecisions.scss";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import DecisionContext from "../../context/DecisionContext";
+import ModalBox from "../../components/ModalBox/ModalBox";
 
 const AddDecision = () => {
   const { getUserData } = useContext(DecisionContext);
+  const [toShowAddMessage, setToShowAddMessage] = useState(false);
 
   // POST
   const saveUserData = async (userData) => {
@@ -39,6 +41,7 @@ const AddDecision = () => {
     };
 
     await saveUserData(decisionData);
+    setToShowAddMessage(true);
     getUserData();
   };
 
@@ -52,7 +55,9 @@ const AddDecision = () => {
         />
       </Link>
       <h1 className="addDecision__heading">Add decisions you have made</h1>
-
+      {toShowAddMessage && (
+        <ModalBox message="Decision is added successfully" />
+      )}
       <form onSubmit={handleSubmit}>
         <DropdownMenu />
         <Form title="Title" isTitleForm={true} />

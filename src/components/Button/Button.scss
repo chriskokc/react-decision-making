@@ -9,4 +9,8 @@
     font-size: 1.1rem;
     font-weight: bold;
     width: 7.5rem;
+
+    &:hover {
+        background-color: $color-hover;
+    }
 }
