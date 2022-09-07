@@ -6,7 +6,8 @@
     &__heading {
         font-family: $font-secondary;
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: bold;
+        display: block;
     }
 
     &__textarea {
@@ -21,5 +22,44 @@
             opacity: 0.7;
         }
     }
+}
 
+@media screen and (min-width: $tablet-breakpoint) {
+    .form {
+        padding: 2.3rem;
+    
+        &__heading {
+            font-size: 1.3rem;
+        }
+    
+        &__textarea {
+            margin-top: 1rem;
+            padding: 0.8rem 1.1rem;
+    
+            &::placeholder {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .form {
+        padding: 2.3rem;
+    
+        &__heading {
+            font-size: 1.5rem;
+        }
+    
+        &__textarea {
+            margin-top: 2rem;
+            padding: 1.2rem 1.5rem;
+            width: 43%;
+            height: 15rem;
+    
+            &::placeholder {
+                font-size: 1.4rem;
+            }
+        }
+    }
 }
