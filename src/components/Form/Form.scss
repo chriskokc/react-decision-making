@@ -16,6 +16,7 @@
         margin-top: 0.5rem;
         padding: 0.5rem 1.1rem;
         background-color: $color-secondary;
+        font-size: 0.9rem;
 
         &::placeholder {
             font-size: 1rem;
@@ -35,9 +36,10 @@
         &__textarea {
             margin-top: 1rem;
             padding: 0.8rem 1.1rem;
+            font-size: 2rem;
     
             &::placeholder {
-                font-size: 1.2rem;
+                font-size: 1.8rem;
             }
         }
     }
@@ -54,11 +56,12 @@
         &__textarea {
             margin-top: 2rem;
             padding: 1.2rem 1.5rem;
-            width: 43%;
-            height: 15rem;
+            width: 75%;
+            height: 18rem;
+            font-size: 2.3rem;
     
             &::placeholder {
-                font-size: 1.4rem;
+                font-size: 2.2rem;
             }
         }
     }
