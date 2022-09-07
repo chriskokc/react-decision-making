@@ -16,3 +16,31 @@
         font-size: 1rem;
     }
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .dropDownMenu {
+        margin: 2.4rem 2.2rem 1.5rem;
+    
+        &__label {
+            font-size: 1.3rem;
+        }
+    
+        &__options {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .dropDownMenu {
+        margin: 2.8rem 2.6rem 1.8rem;
+    
+        &__label {
+            font-size: 1.5rem;
+        }
+    
+        &__options {
+            font-size: 1.4rem;
+        }
+    }
+}
