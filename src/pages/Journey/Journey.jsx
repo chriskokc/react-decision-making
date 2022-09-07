@@ -7,8 +7,13 @@ import { useContext } from "react";
 import DecisionContext from "../../context/DecisionContext";
 
 const Journey = () => {
-  const { userData, toShowMyDecisions, handleGetMyDecisions } =
-    useContext(DecisionContext);
+  const {
+    userData,
+    toShowInspirations,
+    toShowMyDecisions,
+    handleGetInspirations,
+    handleGetMyDecisions,
+  } = useContext(DecisionContext);
 
   return (
     <div className="journey">
@@ -20,7 +25,11 @@ const Journey = () => {
         />
       </Link>
       <h1 className="journey__heading">Journey</h1>
-      <HorizontalNavBar getMyDecisions={handleGetMyDecisions} />
+      <HorizontalNavBar
+        getInspirations={handleGetInspirations}
+        getMyDecisions={handleGetMyDecisions}
+      />
+      {toShowInspirations && <h1>Inspirations</h1>}
       {toShowMyDecisions && <DecisionCardList decisionArr={userData} />}
     </div>
   );

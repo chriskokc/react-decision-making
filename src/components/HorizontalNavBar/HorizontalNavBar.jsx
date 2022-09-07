@@ -1,9 +1,11 @@
 import "./HorizontalNavBar.scss";
 
-const HorizontalNavBar = ({ getMyDecisions }) => {
+const HorizontalNavBar = ({ getInspirations, getMyDecisions }) => {
   return (
     <nav className="navbar">
-      <p className="navbar__item">Inspirations from others</p>
+      <p className="navbar__item" onClick={getInspirations}>
+        Inspirations from others
+      </p>
       <p className="navbar__item" onClick={getMyDecisions}>
         My Decisions
       </p>

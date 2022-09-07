@@ -4,6 +4,7 @@ const DecisionContext = createContext({});
 
 export const DecisionProvider = ({ children }) => {
   const [userData, setUserData] = useState([]);
+  const [toShowInspirations, setToShowInspirations] = useState(false);
   const [toShowMyDecisions, setToShowMyDecisions] = useState(false);
 
   // GET
@@ -14,7 +15,13 @@ export const DecisionProvider = ({ children }) => {
     setUserData(data);
   };
 
+  const handleGetInspirations = () => {
+    setToShowMyDecisions(false);
+    setToShowInspirations(true);
+  };
+
   const handleGetMyDecisions = () => {
+    setToShowInspirations(false);
     setToShowMyDecisions(true);
   };
 
@@ -26,7 +33,9 @@ export const DecisionProvider = ({ children }) => {
     <DecisionContext.Provider
       value={{
         userData,
+        toShowInspirations,
         toShowMyDecisions,
+        handleGetInspirations,
         handleGetMyDecisions,
         getUserData,
       }}
