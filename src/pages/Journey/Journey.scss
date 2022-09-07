@@ -17,3 +17,37 @@
         margin: 2.5rem auto 1.8rem;
     }
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .journey {
+        &__black-cross {
+            position: relative;
+            left: 2rem;
+            top: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
+        &__heading {
+            font-size: 2.5rem;
+            margin: 3.5rem auto 3rem;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .journey {
+        &__black-cross {
+            position: relative;
+            left: 2.5rem;
+            top: 2.5rem;
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+        
+        &__heading {
+            font-size: 2.5rem;
+            margin: 3.5rem auto 4rem;
+        }
+    }
+}
