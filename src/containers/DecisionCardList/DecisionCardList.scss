@@ -1,3 +1,4 @@
+@use "../../styles/variables" as *;
 
 .card-list {
     padding: 1rem 2.5rem 1rem 1rem;
@@ -12,4 +13,28 @@
             font-size: 1.6rem;
         }
     } 
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .card-list {
+        padding:  2rem 5rem 2rem 0;
+    
+        &__link {
+            .card-list__logo {
+                font-size: 2rem;
+            }
+        } 
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .card-list {
+        padding:  1.8rem 10rem 1.3rem 0;
+    
+        &__link {
+            .card-list__logo {
+                font-size: 2.3rem;
+            }
+        } 
+    }
 }
