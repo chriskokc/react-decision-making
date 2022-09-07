@@ -5,6 +5,7 @@ import HorizontalNavBar from "../../components/HorizontalNavBar/HorizontalNavBar
 import DecisionCardList from "../../containers/DecisionCardList/DecisionCardList";
 import { useContext } from "react";
 import DecisionContext from "../../context/DecisionContext";
+import InspirationCard from "../../components/InspirationCard/InspirationCard";
 
 const Journey = () => {
   const {
@@ -29,7 +30,7 @@ const Journey = () => {
         getInspirations={handleGetInspirations}
         getMyDecisions={handleGetMyDecisions}
       />
-      {toShowInspirations && <h1>Inspirations</h1>}
+      {toShowInspirations && <InspirationCard />}
       {toShowMyDecisions && <DecisionCardList decisionArr={userData} />}
     </div>
   );
