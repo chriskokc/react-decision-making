@@ -32,3 +32,54 @@
         margin: 1.5rem auto 0;
     }
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .section {
+        &__container {
+            .section__heading {
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+        
+            .section__link {
+                font-size: 1.8rem;
+            }
+        }
+    
+        &__description {
+            font-size: 1.3rem;
+            margin: 0.5rem auto;
+        }
+    
+        &__hr {
+            width: 5rem;
+            margin: 2.5rem auto 0;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .section {
+        &__container {
+            .section__heading {
+                font-size: 2.2rem;
+                margin: 2rem 0;
+            }
+        
+            .section__link {
+                font-size: 2rem;
+            }
+        }
+    
+        &__description {
+            font-size: 1.5rem;
+            margin: 0.5rem auto;
+        }
+    
+        &__hr {
+            width: 5rem;
+            margin: 4rem auto 0;
+        }
+    }
+}
+

@@ -9,7 +9,7 @@ const Home = () => {
         <Section
           sectionTitle="Journey"
           sectionRoute="journey"
-          sectionDescription="You can always learn from your experience and they are valuable indeed.."
+          sectionDescription="You can always learn from your experience and they are valuable indeed..."
         />
         <Section
           sectionTitle="Add decisions"
