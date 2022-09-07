@@ -2,16 +2,17 @@
 
 .inspiration {
     padding: 1rem;
-    margin: 1rem auto;
     font-style: italic;
 
     &__content {
         line-height: 1.5;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-family: $font-secondary;
+        margin: 1.3rem auto 1.5rem;
 
         .inspiration__person {
             font-weight: bold;
+            font-family: $font-secondary;
         }
     }
 }
