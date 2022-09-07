@@ -16,3 +16,26 @@
         }
     }
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .inspiration {
+        padding: 1.6rem;
+    
+        &__content {
+            font-size: 1.3rem;
+            margin: 1.5rem auto 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .inspiration {
+        padding: 3.5rem;
+    
+        &__content {
+            font-size: 1.5rem;
+            margin: 1rem auto 2.8rem;
+        }
+    }
+}
+
