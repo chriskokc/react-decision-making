@@ -13,3 +13,33 @@
     }
 
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .home {
+        padding: 1.5rem;
+
+        &__title {
+            margin-bottom: 5rem;
+            font-size: 3rem;
+        }
+
+        &__main {
+            padding: 1.2rem;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .home {
+        padding: 1.5rem;
+
+        &__title {
+            margin-bottom: 5rem;
+            font-size: 3rem;
+        }
+
+        &__main {
+            padding: 1rem;
+        }
+    }
+}
