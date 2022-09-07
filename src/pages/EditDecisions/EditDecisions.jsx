@@ -113,7 +113,7 @@ const EditDecisions = () => {
       )}
       {requiresEdit && (
         <form onSubmit={handleSubmit}>
-          <DropdownMenu />
+          <DropdownMenu chosenOption={foundDecision()[0].type} />
           <Form title="Title" isTitleForm={true} />
           <Form title="Content" isTitleForm={false} />
           <div className="editDecision__btn-container--secondary">
