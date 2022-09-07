@@ -12,7 +12,7 @@ import Form from "../../components/Form/Form";
 
 const EditDecisions = () => {
   const { decisionId } = useParams();
-  const { userData, getUserData } = useContext(DecisionContext);
+  const { userData, getUserData, setToStarList } = useContext(DecisionContext);
   const [isDeleted, setIsDeleted] = useState(false);
   const [toShowDeleteMessage, setToShowDeleteMessage] = useState(false);
   const [toShowEditMessage, setToShowEditMessage] = useState(false);
@@ -23,6 +23,10 @@ const EditDecisions = () => {
       return decision.id === Number(decisionId);
     });
     return result;
+  };
+
+  const handleFavouriteDecision = () => {
+    setToStarList((prevState) => [...prevState, foundDecision()[0]]);
   };
 
   // DELETE
@@ -106,10 +110,13 @@ const EditDecisions = () => {
         />
       )}
       {!isDeleted && !requiresEdit && (
-        <div className="editDecision__btn-container">
-          <Button buttonText="Remove" onClick={handleDelete} />
-          <Button buttonText="Edit" onClick={handleEdit} />
-        </div>
+        <>
+          <div className="editDecision__btn-container">
+            <Button buttonText="Remove" onClick={handleDelete} />
+            <Button buttonText="Edit" onClick={handleEdit} />
+          </div>
+          <span className="editDecision__favourite">Add to Favourite⭐️</span>
+        </>
       )}
       {requiresEdit && (
         <form onSubmit={handleSubmit}>

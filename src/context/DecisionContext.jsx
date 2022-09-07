@@ -4,8 +4,10 @@ const DecisionContext = createContext({});
 
 export const DecisionProvider = ({ children }) => {
   const [userData, setUserData] = useState([]);
+  const [toStarList, setToStarList] = useState([]);
   const [toShowInspirations, setToShowInspirations] = useState(false);
   const [toShowMyDecisions, setToShowMyDecisions] = useState(false);
+  const [toShowFavourite, setToShowFavourite] = useState(false);
 
   // GET
   const getUserData = async () => {
@@ -17,12 +19,20 @@ export const DecisionProvider = ({ children }) => {
 
   const handleGetInspirations = () => {
     setToShowMyDecisions(false);
+    setToShowFavourite(false);
     setToShowInspirations(true);
   };
 
   const handleGetMyDecisions = () => {
     setToShowInspirations(false);
+    setToShowFavourite(false);
     setToShowMyDecisions(true);
+  };
+
+  const handleGetFavouriteDecision = () => {
+    setToShowInspirations(false);
+    setToShowMyDecisions(false);
+    setToShowFavourite(true);
   };
 
   useEffect(() => {
@@ -33,10 +43,14 @@ export const DecisionProvider = ({ children }) => {
     <DecisionContext.Provider
       value={{
         userData,
+        toStarList,
+        setToStarList,
         toShowInspirations,
         toShowMyDecisions,
+        toShowFavourite,
         handleGetInspirations,
         handleGetMyDecisions,
+        handleGetFavouriteDecision,
         getUserData,
       }}
     >

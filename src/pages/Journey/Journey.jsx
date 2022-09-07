@@ -10,10 +10,13 @@ import InspirationCard from "../../components/InspirationCard/InspirationCard";
 const Journey = () => {
   const {
     userData,
+    toStarList,
     toShowInspirations,
     toShowMyDecisions,
+    toShowFavourite,
     handleGetInspirations,
     handleGetMyDecisions,
+    handleGetFavouriteDecision,
   } = useContext(DecisionContext);
 
   return (
@@ -29,9 +32,11 @@ const Journey = () => {
       <HorizontalNavBar
         getInspirations={handleGetInspirations}
         getMyDecisions={handleGetMyDecisions}
+        getFavourite={handleGetFavouriteDecision}
       />
       {toShowInspirations && <InspirationCard />}
       {toShowMyDecisions && <DecisionCardList decisionArr={userData} />}
+      {toShowFavourite && <DecisionCardList decisionArr={toStarList} />}
     </div>
   );
 };
