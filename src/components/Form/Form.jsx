@@ -1,6 +1,6 @@
 import "./Form.scss";
 
-const Form = ({ title, isTitleForm }) => {
+const Form = ({ title, isTitleForm, contentWritten }) => {
   return (
     <div className="form">
       <label htmlFor={`${title}-form`} className="form__heading">
@@ -14,6 +14,7 @@ const Form = ({ title, isTitleForm }) => {
         placeholder={
           isTitleForm ? "Insert title here" : "Write your content here"
         }
+        defaultValue={contentWritten}
       ></textarea>
     </div>
   );

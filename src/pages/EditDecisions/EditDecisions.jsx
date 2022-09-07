@@ -114,8 +114,16 @@ const EditDecisions = () => {
       {requiresEdit && (
         <form onSubmit={handleSubmit}>
           <DropdownMenu chosenOption={foundDecision()[0].type} />
-          <Form title="Title" isTitleForm={true} />
-          <Form title="Content" isTitleForm={false} />
+          <Form
+            title="Title"
+            isTitleForm={true}
+            contentWritten={foundDecision()[0].title}
+          />
+          <Form
+            title="Content"
+            isTitleForm={false}
+            contentWritten={foundDecision()[0].content}
+          />
           <div className="editDecision__btn-container--secondary">
             <Button buttonText="modify" />
           </div>
