@@ -9,12 +9,12 @@ const Home = () => {
         <Section
           sectionTitle="Journey"
           sectionRoute="journey"
-          sectionDescription="You can always learn from your experience.."
+          sectionDescription="You can always learn from your experience and they are valuable indeed.."
         />
         <Section
           sectionTitle="Add decisions"
           sectionRoute="addDecisions"
-          sectionDescription="Record the best or worst decisions you have made today"
+          sectionDescription="Record the best and the most important decisions you have made today"
         />
       </div>
     </div>
