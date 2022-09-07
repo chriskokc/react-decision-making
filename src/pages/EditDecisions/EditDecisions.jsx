@@ -16,6 +16,7 @@ const EditDecisions = () => {
   const [isDeleted, setIsDeleted] = useState(false);
   const [toShowDeleteMessage, setToShowDeleteMessage] = useState(false);
   const [toShowEditMessage, setToShowEditMessage] = useState(false);
+  const [toShowStarMessage, setToShowStarMessage] = useState(false);
   const [requiresEdit, setRequiresEdit] = useState(false);
 
   const foundDecision = () => {
@@ -27,6 +28,7 @@ const EditDecisions = () => {
 
   const handleFavouriteDecision = () => {
     setToStarList((prevState) => [...prevState, foundDecision()[0]]);
+    setToShowStarMessage(true);
   };
 
   // DELETE
@@ -105,6 +107,9 @@ const EditDecisions = () => {
       )}
       {toShowEditMessage && (
         <ModalBox message="You have modified Decision successfully" />
+      )}
+      {toShowStarMessage && (
+        <ModalBox message="You have added Decision to Favourite successfully" />
       )}
       {!isDeleted && (
         <DecisionCard
