@@ -45,6 +45,11 @@ const EditDecisions = () => {
     await deleteUserDataById(foundDecision()[0].id);
     setIsDeleted(true);
     setToShowDeleteMessage(true);
+    setToStarList((prevState) => {
+      return prevState.filter((decision) => {
+        return decision.id !== foundDecision()[0].id;
+      });
+    });
     getUserData();
   };
 
@@ -115,7 +120,12 @@ const EditDecisions = () => {
             <Button buttonText="Remove" onClick={handleDelete} />
             <Button buttonText="Edit" onClick={handleEdit} />
           </div>
-          <span className="editDecision__favourite">Add to Favourite⭐️</span>
+          <span
+            className="editDecision__favourite"
+            onClick={handleFavouriteDecision}
+          >
+            Add to Favourite ⭐️
+          </span>
         </>
       )}
       {requiresEdit && (
