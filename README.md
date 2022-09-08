@@ -1,22 +1,18 @@
 # Full Stack Project - Frontend
 
-This project was built in React [Insights](https://chriskokc.github.io/react-decision-making/).
+This project was built in React: [Insights](https://chriskokc.github.io/react-decision-making/)
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ## Project Description
 
-This project Insights is an application that allows users to record any decisions they have made. They can create, read, update and delete a particular decision record with the following: - Type (Either Life, Work or Relationship) - Title - Content
+This project Insights is an application that allows users to record any decisions they have made. They can create, read, update and delete a particular decision record with the following:
+
+- Type (Either Life, Work or Relationship)
+- Title
+- Content
 
 ### Code Splitting
 
