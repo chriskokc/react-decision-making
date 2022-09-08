@@ -1,7 +1,6 @@
 @use "../../styles/variables" as *;
 
 .editDecision {
-
     &__black-cross {
         position: relative;
         left: 0.8rem;
@@ -40,3 +39,59 @@
         }
     }
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .editDecision {
+        &__black-cross {
+            position: relative;
+            left: 2rem;
+            top: 2rem;
+            height: 1.5rem;
+        }
+    
+        &__heading {
+            font-size: 2.5rem;
+            margin: 3.5rem auto 3rem;
+        }
+    
+        &__btn-container {
+            margin: 3.8rem 2rem;
+
+            &--secondary {
+                margin: 0.5rem 1rem ;
+                padding: 2rem;
+            }
+        }
+    
+        &__favourite {
+            font-size: 1.4rem;
+            margin: 6.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    .editDecision {
+        &__black-cross {
+            position: relative;
+            left: 2.5rem;
+            top: 2.5rem;
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    
+        &__heading {
+            margin: 3.5rem auto 4rem;
+        }
+    
+        &__btn-container {
+            margin: 4rem 1.8rem;
+        }
+    
+        &__favourite {
+            font-size: 1.8rem;
+            margin: 3rem 12rem;
+        }
+    }
+}
+
