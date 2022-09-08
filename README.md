@@ -2,10 +2,6 @@
 
 This project was built in React: [Insights](https://chriskokc.github.io/react-decision-making/)
 
-## Available Scripts
-
-In the project directory, you can run:
-
 ## Project Description
 
 This project Insights is an application that allows users to record any decisions they have made. They can create, read, update and delete a particular decision record with the following:
@@ -14,26 +10,35 @@ This project Insights is an application that allows users to record any decision
 - Title
 - Content
 
-### Code Splitting
+User can also click on each decision record and add that to a favoutite list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Features
 
-### Analyzing the Bundle Size
+<img width="330" alt="home" src="https://user-images.githubusercontent.com/87203804/189091895-c8c6abae-8dd0-40c1-bd4f-3c10eefc8eb2.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="330" alt="addDecisions" src="https://user-images.githubusercontent.com/87203804/189092560-55c3ba13-b8fd-4f28-8467-16bc5a994cc0.png">
 
-### Making a Progressive Web App
+<img width="330" alt="journey" src="https://user-images.githubusercontent.com/87203804/189092605-1ec0e09b-f1e3-4b8a-b50a-3a1890f00227.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="330" alt="decisionCard" src="https://user-images.githubusercontent.com/87203804/189093605-0bff9135-28e4-4de8-96aa-81dd62668328.png">
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Code Structure
 
-### Deployment
+The project has been structured into differnt parts:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Pages
+- Components
+- Containers
+- Context
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+![pages](https://user-images.githubusercontent.com/87203804/189100538-0e73ed43-eb21-4d9d-8e1d-9cde057d1300.png)
+
+![components](https://user-images.githubusercontent.com/87203804/189100550-86730aa5-ed88-4d38-aef3-e35a7b8e487d.png)
+
+![containers](https://user-images.githubusercontent.com/87203804/189100561-2c352d81-146f-4ca8-a691-5e6e9781f256.png)
+
+![context](https://user-images.githubusercontent.com/87203804/189100572-328fadbe-1d2d-44b0-8df6-33ff81617d0a.png)
+
